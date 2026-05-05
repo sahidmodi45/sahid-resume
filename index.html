@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -24,8 +24,6 @@
   .section { margin-top: 36px; }
   .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
-
-  /* SKILLS - neat grid */
   .skills-table { width: 100%; border-collapse: collapse; }
   .skills-table tr { border-bottom: 1px solid var(--rule); }
   .skills-table tr:last-child { border-bottom: none; }
@@ -34,7 +32,6 @@
   .skill-cat { font-size: 11px; font-weight: 600; color: var(--ink-3); letter-spacing: 1px; text-transform: uppercase; padding-top: 3px; }
   .tags { display: flex; flex-wrap: wrap; gap: 5px; }
   .tag { background: var(--tag-bg); color: var(--ink-2); font-size: 11.5px; padding: 3px 9px; border-radius: 3px; }
-
   .entry { margin-bottom: 26px; padding-bottom: 26px; border-bottom: 1px solid var(--rule); }
   .entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .entry-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2px; }
@@ -53,8 +50,6 @@
   .edu-badge { display: inline-block; margin-top: 4px; font-size: 10.5px; background: #e8f4f0; color: #1a7a5e; padding: 2px 8px; border-radius: 3px; }
   .proj-tech { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
   .proj-tech-tag { font-family: 'DM Mono', monospace; font-size: 10.5px; color: var(--ink-3); background: #f5f4f1; padding: 2px 8px; border-radius: 3px; border: 1px solid var(--rule); }
-  @media print { body { background: white; } .page { margin: 0; border: none; max-width: 100%; } }
-  @media (max-width: 640px) { .page { margin: 0; } .header, .body { padding-left: 24px; padding-right: 24px; } }
 </style>
 </head>
 <body>
@@ -71,7 +66,6 @@
     </div>
   </div>
   <div class="body">
-
     <div class="section">
       <div class="section-label">Education</div>
       <div class="edu-row">
@@ -79,33 +73,16 @@
         <div class="edu-right"><div class="edu-year">Expected 2027</div><div class="edu-badge">Ongoing</div></div>
       </div>
     </div>
-
     <div class="section">
       <div class="section-label">Skills</div>
       <table class="skills-table">
-        <tr>
-          <td><div class="skill-cat">Automation &amp; Scripting</div></td>
-          <td><div class="tags"><span class="tag">Google Apps Script</span><span class="tag">Gmail API</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Bash / Terminal</span></div></td>
-        </tr>
-        <tr>
-          <td><div class="skill-cat">Growth &amp; Outreach</div></td>
-          <td><div class="tags"><span class="tag">Cold Email Systems</span><span class="tag">Campaign Automation</span><span class="tag">Lead Management</span><span class="tag">A/B Testing</span><span class="tag">Client Communication</span><span class="tag">Stakeholder Reporting</span></div></td>
-        </tr>
-        <tr>
-          <td><div class="skill-cat">Data &amp; Analytics</div></td>
-          <td><div class="tags"><span class="tag">Google Sheets</span><span class="tag">Campaign Analytics</span><span class="tag">Data Reporting</span><span class="tag">Attribution Tracking</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span></div></td>
-        </tr>
-        <tr>
-          <td><div class="skill-cat">AI &amp; ML</div></td>
-          <td><div class="tags"><span class="tag">OpenCV</span><span class="tag">Face Recognition</span><span class="tag">NLP / Spam Detection</span><span class="tag">Claude API</span><span class="tag">cryptography</span><span class="tag">Real-time CV</span></div></td>
-        </tr>
-        <tr>
-          <td><div class="skill-cat">Tools &amp; Platforms</div></td>
-          <td><div class="tags"><span class="tag">GitHub Pages</span><span class="tag">Claude Code</span><span class="tag">VS Code</span><span class="tag">Git</span><span class="tag">HTML / CSS</span></div></td>
-        </tr>
+        <tr><td><div class="skill-cat">Automation &amp; Scripting</div></td><td><div class="tags"><span class="tag">Google Apps Script</span><span class="tag">Gmail API</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Bash / Terminal</span></div></td></tr>
+        <tr><td><div class="skill-cat">Growth &amp; Outreach</div></td><td><div class="tags"><span class="tag">Cold Email Systems</span><span class="tag">Campaign Automation</span><span class="tag">Lead Management</span><span class="tag">A/B Testing</span><span class="tag">Client Communication</span><span class="tag">Stakeholder Reporting</span></div></td></tr>
+        <tr><td><div class="skill-cat">Data &amp; Analytics</div></td><td><div class="tags"><span class="tag">Google Sheets</span><span class="tag">Campaign Analytics</span><span class="tag">Data Reporting</span><span class="tag">Attribution Tracking</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span></div></td></tr>
+        <tr><td><div class="skill-cat">AI &amp; ML</div></td><td><div class="tags"><span class="tag">OpenCV</span><span class="tag">Face Recognition</span><span class="tag">NLP / Spam Detection</span><span class="tag">Claude API</span><span class="tag">cryptography</span><span class="tag">Real-time CV</span></div></td></tr>
+        <tr><td><div class="skill-cat">Tools &amp; Platforms</div></td><td><div class="tags"><span class="tag">GitHub Pages</span><span class="tag">Claude Code</span><span class="tag">VS Code</span><span class="tag">Git</span><span class="tag">HTML / CSS</span></div></td></tr>
       </table>
     </div>
-
     <div class="section">
       <div class="section-label">Internships</div>
       <div class="entry">
@@ -136,43 +113,29 @@
         </ul>
       </div>
     </div>
-
     <div class="section">
       <div class="section-label">Projects</div>
       <div class="entry">
         <div class="entry-header"><div class="entry-title">SmartScheduler — AI Timetable Generator</div></div>
-        <ul>
-          <li>Built a web app where users input tasks and time slots to auto-generate a <b>structured, conflict-free timetable</b></li>
-          <li>Supports adding, editing, and deleting entries with real-time timetable preview and export</li>
-        </ul>
+        <ul><li>Built a web app where users input tasks and time slots to auto-generate a <b>structured, conflict-free timetable</b></li><li>Supports adding, editing, and deleting entries with real-time timetable preview and export</li></ul>
         <div class="proj-tech"><span class="proj-tech-tag">Python</span><span class="proj-tech-tag">HTML/CSS/JS</span><span class="proj-tech-tag">Google Apps Script</span></div>
       </div>
       <div class="entry">
         <div class="entry-header"><div class="entry-title">VaultKey — Password Encryption Manager</div></div>
-        <ul>
-          <li>Developed a password manager that encrypts and decrypts credentials for <b>multiple applications</b> using a master key</li>
-          <li>Ensures no plaintext passwords are ever stored; all data is <b>AES-encrypted</b> at rest using Python's cryptography library</li>
-        </ul>
+        <ul><li>Developed a password manager that encrypts and decrypts credentials for <b>multiple applications</b> using a master key</li><li>Ensures no plaintext passwords are ever stored; all data is <b>AES-encrypted</b> at rest using Python's cryptography library</li></ul>
         <div class="proj-tech"><span class="proj-tech-tag">Python</span><span class="proj-tech-tag">cryptography lib</span><span class="proj-tech-tag">SQLite</span></div>
       </div>
       <div class="entry">
         <div class="entry-header"><div class="entry-title">FaceLog — Facial Recognition Attendance System</div></div>
-        <ul>
-          <li>Captures and registers faces, then uses real-time recognition to automatically mark attendance with timestamp logging</li>
-          <li>Exports attendance records to spreadsheet format; achieves <b>95%+ recognition accuracy</b> under standard lighting</li>
-        </ul>
+        <ul><li>Captures and registers faces, then uses real-time recognition to automatically mark attendance with timestamp logging</li><li>Exports attendance records to spreadsheet format; achieves <b>95%+ recognition accuracy</b> under standard lighting</li></ul>
         <div class="proj-tech"><span class="proj-tech-tag">Python</span><span class="proj-tech-tag">OpenCV</span><span class="proj-tech-tag">face_recognition</span><span class="proj-tech-tag">SQLite</span></div>
       </div>
       <div class="entry">
         <div class="entry-header"><div class="entry-title">SpamShield — Intelligent Email Spam Detector</div></div>
-        <ul>
-          <li>Scans and analyzes email threads to learn spam patterns from historical data, then flags future spam in real time</li>
-          <li>Trained on personal inbox data using NLP and scikit-learn; achieves <b>92%+ classification accuracy</b> on test set</li>
-        </ul>
+        <ul><li>Scans and analyzes email threads to learn spam patterns from historical data, then flags future spam in real time</li><li>Trained on personal inbox data using NLP and scikit-learn; achieves <b>92%+ classification accuracy</b> on test set</li></ul>
         <div class="proj-tech"><span class="proj-tech-tag">Python</span><span class="proj-tech-tag">Gmail API</span><span class="proj-tech-tag">NLP / scikit-learn</span><span class="proj-tech-tag">Pandas</span></div>
       </div>
     </div>
-
   </div>
 </div>
 </body>
