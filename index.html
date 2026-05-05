@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sahid Modi – Resume</title>
+<title>Sahid Modi - Resume</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -24,10 +24,17 @@
   .section { margin-top: 36px; }
   .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
-  .skill-cat { font-size: 11px; font-weight: 600; color: var(--ink-3); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+
+  /* SKILLS - neat grid */
+  .skills-table { width: 100%; border-collapse: collapse; }
+  .skills-table tr { border-bottom: 1px solid var(--rule); }
+  .skills-table tr:last-child { border-bottom: none; }
+  .skills-table td { padding: 8px 0; vertical-align: top; }
+  .skills-table td:first-child { width: 170px; padding-right: 16px; }
+  .skill-cat { font-size: 11px; font-weight: 600; color: var(--ink-3); letter-spacing: 1px; text-transform: uppercase; padding-top: 3px; }
   .tags { display: flex; flex-wrap: wrap; gap: 5px; }
   .tag { background: var(--tag-bg); color: var(--ink-2); font-size: 11.5px; padding: 3px 9px; border-radius: 3px; }
+
   .entry { margin-bottom: 26px; padding-bottom: 26px; border-bottom: 1px solid var(--rule); }
   .entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .entry-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2px; }
@@ -37,6 +44,7 @@
   .entry ul { padding-left: 16px; list-style: none; }
   .entry ul li { position: relative; font-size: 13px; color: var(--ink-2); margin-bottom: 4px; line-height: 1.55; }
   .entry ul li::before { content: '—'; position: absolute; left: -16px; color: var(--rule); font-size: 12px; }
+  .entry ul li b { color: var(--ink); font-weight: 600; }
   .edu-row { display: flex; justify-content: space-between; align-items: center; }
   .edu-degree { font-size: 14.5px; font-weight: 600; }
   .edu-college { font-size: 12.5px; color: var(--ink-3); margin-top: 2px; }
@@ -63,6 +71,7 @@
     </div>
   </div>
   <div class="body">
+
     <div class="section">
       <div class="section-label">Education</div>
       <div class="edu-row">
@@ -70,69 +79,100 @@
         <div class="edu-right"><div class="edu-year">Expected 2027</div><div class="edu-badge">Ongoing</div></div>
       </div>
     </div>
+
     <div class="section">
       <div class="section-label">Skills</div>
-      <div class="skills-grid">
-        <div><div class="skill-cat">Automation &amp; Scripting</div><div class="tags"><span class="tag">Google Apps Script</span><span class="tag">Gmail API</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Bash / Terminal</span></div></div>
-        <div><div class="skill-cat">Growth &amp; Outreach</div><div class="tags"><span class="tag">Cold Email Systems</span><span class="tag">Campaign Automation</span><span class="tag">Lead Management</span><span class="tag">A/B Testing</span><span class="tag">Client Communication</span><span class="tag">Stakeholder Reporting</span></div></div>
-        <div><div class="skill-cat">Data &amp; Analytics</div><div class="tags"><span class="tag">Google Sheets</span><span class="tag">Campaign Analytics</span><span class="tag">Data Reporting</span><span class="tag">Attribution Tracking</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span></div></div>
-        <div><div class="skill-cat">AI &amp; ML</div><div class="tags"><span class="tag">OpenCV</span><span class="tag">Face Recognition</span><span class="tag">NLP / Spam Detection</span><span class="tag">Claude API</span><span class="tag">cryptography</span><span class="tag">Real-time CV</span></div></div>
-        <div><div class="skill-cat">Tools &amp; Platforms</div><div class="tags"><span class="tag">GitHub Pages</span><span class="tag">Claude Code</span><span class="tag">VS Code</span><span class="tag">Git</span><span class="tag">HTML / CSS</span></div></div>
-      </div>
+      <table class="skills-table">
+        <tr>
+          <td><div class="skill-cat">Automation &amp; Scripting</div></td>
+          <td><div class="tags"><span class="tag">Google Apps Script</span><span class="tag">Gmail API</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Bash / Terminal</span></div></td>
+        </tr>
+        <tr>
+          <td><div class="skill-cat">Growth &amp; Outreach</div></td>
+          <td><div class="tags"><span class="tag">Cold Email Systems</span><span class="tag">Campaign Automation</span><span class="tag">Lead Management</span><span class="tag">A/B Testing</span><span class="tag">Client Communication</span><span class="tag">Stakeholder Reporting</span></div></td>
+        </tr>
+        <tr>
+          <td><div class="skill-cat">Data &amp; Analytics</div></td>
+          <td><div class="tags"><span class="tag">Google Sheets</span><span class="tag">Campaign Analytics</span><span class="tag">Data Reporting</span><span class="tag">Attribution Tracking</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span></div></td>
+        </tr>
+        <tr>
+          <td><div class="skill-cat">AI &amp; ML</div></td>
+          <td><div class="tags"><span class="tag">OpenCV</span><span class="tag">Face Recognition</span><span class="tag">NLP / Spam Detection</span><span class="tag">Claude API</span><span class="tag">cryptography</span><span class="tag">Real-time CV</span></div></td>
+        </tr>
+        <tr>
+          <td><div class="skill-cat">Tools &amp; Platforms</div></td>
+          <td><div class="tags"><span class="tag">GitHub Pages</span><span class="tag">Claude Code</span><span class="tag">VS Code</span><span class="tag">Git</span><span class="tag">HTML / CSS</span></div></td>
+        </tr>
+      </table>
     </div>
+
     <div class="section">
       <div class="section-label">Internships</div>
       <div class="entry">
         <div class="entry-header"><div class="entry-title">Myluigi.ai</div><div class="entry-date">2024 – Present</div></div>
         <div class="entry-sub">Growth &amp; Outbound Systems Intern</div>
         <ul>
-          <li>Built and executed a multi-stage cold outreach system targeting 500+ game studios and SaaS companies using Gmail and Google Sheets</li>
-          <li>Designed automated follow-up sequences (Fresh → F1 → F2 → F3) that improved response rates by 35% across campaigns</li>
-          <li>Developed Google Apps Script workflows to track email threads, classify outreach stages, and generate campaign-level reports</li>
-          <li>Integrated Gmail API to extract thread-level data and map emails to specific campaigns for accurate performance analysis</li>
-          <li>Created structured dashboards to analyze emails sent, reply rates, and stage-wise performance across 25+ outreach cycles</li>
-          <li>Wrote and tested 15+ outbound email templates focused on ROAS optimization, player value, and UA funding</li>
-          <li>Communicated campaign results and strategic recommendations directly to founders, translating data into clear, actionable insights</li>
-          <li>Identified high-performing messaging patterns by analyzing reply data, improving open-to-reply conversion by 40%</li>
+          <li>Built and executed a multi-stage cold outreach system targeting <b>500+ game studios</b> and SaaS companies using Gmail and Google Sheets</li>
+          <li>Designed automated follow-up sequences (Fresh → F1 → F2 → F3) that improved response rates by <b>35%</b> across campaigns</li>
+          <li>Developed <b>Google Apps Script</b> workflows to track email threads, classify outreach stages, and generate campaign-level reports</li>
+          <li>Integrated <b>Gmail API</b> to extract thread-level data and map emails to specific campaigns for accurate performance analysis</li>
+          <li>Created structured dashboards to analyze emails sent, reply rates, and stage-wise performance across <b>25+ outreach cycles</b></li>
+          <li>Wrote and tested <b>15+ outbound email templates</b> focused on ROAS optimization, player value, and UA funding</li>
+          <li>Communicated campaign results and strategic recommendations <b>directly to founders</b>, translating data into clear, actionable insights</li>
+          <li>Identified high-performing messaging patterns by analyzing reply data, improving open-to-reply conversion by <b>40%</b></li>
         </ul>
       </div>
       <div class="entry">
         <div class="entry-header"><div class="entry-title">JustBaat.ai</div><div class="entry-date">2024</div></div>
         <div class="entry-sub">Growth &amp; Outbound Systems Intern</div>
         <ul>
-          <li>Built and managed an automated outbound engine converting cold lead lists into structured campaigns across 20+ outreach cycles</li>
-          <li>Designed multi-stage follow-up systems that captured 3x more responses beyond initial outreach attempts</li>
-          <li>Automated campaign execution and tracking using Google Apps Script, cutting manual effort by 60% and scaling throughput</li>
-          <li>Analyzed campaign performance across templates and stages; presented findings to the founding team with clear recommendations</li>
-          <li>Maintained clear, structured communication with internal stakeholders on pipeline status, blockers, and performance updates</li>
-          <li>Improved data reliability by debugging tracking issues and refining attribution logic, reducing reporting errors by 45%</li>
-          <li>Iterated on messaging and targeting strategy based on reply data, increasing qualified response rate across campaigns</li>
+          <li>Built and managed an automated outbound engine converting cold lead lists into structured campaigns across <b>20+ outreach cycles</b></li>
+          <li>Designed multi-stage follow-up systems that captured <b>3x more responses</b> beyond initial outreach attempts</li>
+          <li>Automated campaign execution and tracking using <b>Google Apps Script</b>, cutting manual effort by <b>60%</b> and scaling throughput</li>
+          <li>Analyzed campaign performance across templates and stages; presented findings to the <b>founding team</b> with clear recommendations</li>
+          <li>Maintained clear, structured <b>communication with stakeholders</b> on pipeline status, blockers, and performance updates</li>
+          <li>Improved data reliability by debugging tracking issues and refining attribution logic, reducing reporting errors by <b>45%</b></li>
+          <li>Iterated on messaging and targeting strategy based on reply data, increasing <b>qualified response rate</b> across campaigns</li>
         </ul>
       </div>
     </div>
+
     <div class="section">
       <div class="section-label">Projects</div>
       <div class="entry">
         <div class="entry-header"><div class="entry-title">SmartScheduler — AI Timetable Generator</div></div>
-        <ul><li>Built a web app where users input tasks and time slots to auto-generate a structured, conflict-free timetable</li><li>Supports adding, editing, and deleting entries with real-time timetable preview and export</li></ul>
+        <ul>
+          <li>Built a web app where users input tasks and time slots to auto-generate a <b>structured, conflict-free timetable</b></li>
+          <li>Supports adding, editing, and deleting entries with real-time timetable preview and export</li>
+        </ul>
         <div class="proj-tech"><span class="proj-tech-tag">Python</span><span class="proj-tech-tag">HTML/CSS/JS</span><span class="proj-tech-tag">Google Apps Script</span></div>
       </div>
       <div class="entry">
         <div class="entry-header"><div class="entry-title">VaultKey — Password Encryption Manager</div></div>
-        <ul><li>Developed a password manager that encrypts and decrypts credentials for multiple applications using a master key</li><li>Ensures no plaintext passwords are ever stored; all data is AES-encrypted at rest using Python's cryptography library</li></ul>
+        <ul>
+          <li>Developed a password manager that encrypts and decrypts credentials for <b>multiple applications</b> using a master key</li>
+          <li>Ensures no plaintext passwords are ever stored; all data is <b>AES-encrypted</b> at rest using Python's cryptography library</li>
+        </ul>
         <div class="proj-tech"><span class="proj-tech-tag">Python</span><span class="proj-tech-tag">cryptography lib</span><span class="proj-tech-tag">SQLite</span></div>
       </div>
       <div class="entry">
         <div class="entry-header"><div class="entry-title">FaceLog — Facial Recognition Attendance System</div></div>
-        <ul><li>Captures and registers faces, then uses real-time recognition to automatically mark attendance with timestamp logging</li><li>Exports attendance records to spreadsheet format; achieves 95%+ recognition accuracy under standard lighting</li></ul>
+        <ul>
+          <li>Captures and registers faces, then uses real-time recognition to automatically mark attendance with timestamp logging</li>
+          <li>Exports attendance records to spreadsheet format; achieves <b>95%+ recognition accuracy</b> under standard lighting</li>
+        </ul>
         <div class="proj-tech"><span class="proj-tech-tag">Python</span><span class="proj-tech-tag">OpenCV</span><span class="proj-tech-tag">face_recognition</span><span class="proj-tech-tag">SQLite</span></div>
       </div>
       <div class="entry">
         <div class="entry-header"><div class="entry-title">SpamShield — Intelligent Email Spam Detector</div></div>
-        <ul><li>Scans and analyzes email threads to learn spam patterns from historical data, then flags future spam in real time</li><li>Trained on personal inbox data using NLP and scikit-learn; achieves 92%+ classification accuracy on test set</li></ul>
+        <ul>
+          <li>Scans and analyzes email threads to learn spam patterns from historical data, then flags future spam in real time</li>
+          <li>Trained on personal inbox data using NLP and scikit-learn; achieves <b>92%+ classification accuracy</b> on test set</li>
+        </ul>
         <div class="proj-tech"><span class="proj-tech-tag">Python</span><span class="proj-tech-tag">Gmail API</span><span class="proj-tech-tag">NLP / scikit-learn</span><span class="proj-tech-tag">Pandas</span></div>
       </div>
     </div>
+
   </div>
 </div>
 </body>
